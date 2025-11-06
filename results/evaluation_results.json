@@ -1,0 +1,26 @@
+{
+  "PPO": {
+    "mean": 500.0,
+    "std": 0.0,
+    "min": 500.0,
+    "max": 500.0,
+    "success_rate": 100.0,
+    "mean_length": 500.0
+  },
+  "DQN": {
+    "mean": 500.0,
+    "std": 0.0,
+    "min": 500.0,
+    "max": 500.0,
+    "success_rate": 100.0,
+    "mean_length": 500.0
+  },
+  "A2C": {
+    "mean": 452.49,
+    "std": 44.1614073598204,
+    "min": 365.0,
+    "max": 500.0,
+    "success_rate": 100.0,
+    "mean_length": 452.49
+  }
+}

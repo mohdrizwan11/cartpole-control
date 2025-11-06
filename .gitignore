@@ -1,0 +1,32 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+
+# Large project artifacts (do NOT commit trained model files or logs)
+models/
+logs/
+
+# Results: keep JSON/plots but ignore raw numpy arrays and heavy artifacts
+results/*.npy
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Optional: local secrets
+.env
