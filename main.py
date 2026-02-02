@@ -29,7 +29,8 @@ class CartPoleDemo:
         
         if not model_path.exists():
             print(f"❌ Model file not found: {model_path}")
-            print("   Please run main.py first to train the models.")
+            print("   Please place the model ZIPs under `models/`.")
+            print("   You can verify expected files with: python check_models.py")
             return
         
         # Load the saved model
@@ -58,7 +59,7 @@ class CartPoleDemo:
                 
                 # Take action
                 obs, reward, terminated, truncated, _ = env.step(action)
-                total_reward += reward
+                total_reward += reward # type: ignore
                 steps += 1
                 done = terminated or truncated
                 
@@ -114,7 +115,7 @@ class CartPoleDemo:
                 while not done:
                     action, _ = model.predict(obs, deterministic=True)
                     obs, reward, terminated, truncated, _ = env.step(action)
-                    total_reward += reward
+                    total_reward += reward # pyright: ignore[reportOperatorIssue]
                     done = terminated or truncated
                 
                 rewards.append(total_reward)
